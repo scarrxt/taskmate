@@ -1,0 +1,373 @@
+.settings-page {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.settings-content {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2rem;
+}
+
+.settings-sidebar {
+  background: white;
+  padding: 1rem;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--gray-200);
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.settings-tab {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-lg);
+  color: var(--gray-700);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  text-align: left;
+}
+
+.settings-tab:hover {
+  background: var(--gray-50);
+}
+
+.settings-tab.active {
+  background: rgba(79, 70, 229, 0.1);
+  color: var(--primary-blue);
+}
+
+.tab-icon {
+  font-size: 1.5rem;
+}
+
+.settings-main {
+  min-height: 600px;
+}
+
+.settings-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--gray-900);
+}
+
+.settings-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--gray-200);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.profile-avatar-section {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.profile-avatar-large {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: var(--gradient-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: var(--gray-700);
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  padding: 1rem 1.25rem;
+  border: 2px solid var(--gray-300);
+  border-radius: var(--radius-lg);
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color var(--transition-base);
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: var(--primary-blue);
+  outline: none;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.setting-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  background: var(--gray-50);
+  border-radius: var(--radius-lg);
+  gap: 2rem;
+}
+
+.setting-item h4 {
+  font-size: 1rem;
+  color: var(--gray-900);
+  margin-bottom: 0.25rem;
+}
+
+.setting-item p {
+  font-size: 0.9rem;
+  color: var(--gray-600);
+}
+
+.toggle-switch {
+  position: relative;
+  width: 56px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.toggle-switch input {
+  display: none;
+}
+
+.toggle-slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--gray-300);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: background var(--transition-base);
+}
+
+.toggle-slider::before {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  left: 4px;
+  bottom: 4px;
+  background: white;
+  border-radius: 50%;
+  transition: transform var(--transition-base);
+}
+
+.toggle-switch input:checked + .toggle-slider {
+  background: var(--primary-blue);
+}
+
+.toggle-switch input:checked + .toggle-slider::before {
+  transform: translateX(24px);
+}
+
+.divider-settings {
+  height: 1px;
+  background: var(--gray-200);
+  margin: 1rem 0;
+}
+
+@media (max-width: 968px) {
+  .settings-content {
+    grid-template-columns: 1fr;
+  }
+
+  .settings-sidebar {
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
+  .settings-tab span:not(.tab-icon) {
+    display: none;
+  }
+
+  .settings-tab {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .settings-page {
+    max-width: 100%;
+  }
+
+  .page-header {
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .page-header h1 {
+    font-size: 1.75rem;
+  }
+
+  .settings-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .settings-sidebar {
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 0.25rem;
+    padding: 0.5rem;
+  }
+
+  .settings-tab {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+
+  .settings-tab span:not(.tab-icon) {
+    display: inline;
+  }
+
+  .settings-card {
+    padding: 1.5rem;
+  }
+
+  .profile-avatar-section {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .profile-avatar-large {
+    width: 80px;
+    height: 80px;
+  }
+
+  .setting-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .setting-item label {
+    width: 100%;
+  }
+
+  .setting-item input,
+  .setting-item textarea,
+  .setting-item select {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .settings-sidebar {
+    gap: 0;
+  }
+
+  .settings-tab {
+    padding: 0.625rem 0.875rem;
+    font-size: 0.85rem;
+  }
+
+  .tab-icon {
+    font-size: 1.25rem;
+  }
+
+  .settings-card {
+    padding: 1.25rem;
+  }
+
+  .profile-avatar-large {
+    width: 72px;
+    height: 72px;
+  }
+
+  .setting-item input,
+  .setting-item textarea,
+  .setting-item select {
+    font-size: 1rem;
+    padding: 0.625rem;
+  }
+
+  .notification-item label {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-header h1 {
+    font-size: 1.25rem;
+  }
+
+  .settings-sidebar {
+    gap: 0;
+    padding: 0.5rem;
+  }
+
+  .settings-tab {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .tab-icon {
+    font-size: 1.1rem;
+  }
+
+  .settings-card {
+    padding: 1rem;
+  }
+
+  .profile-avatar-large {
+    width: 64px;
+    height: 64px;
+    font-size: 2rem;
+  }
+
+  .setting-item input,
+  .setting-item textarea,
+  .setting-item select {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+
+  .setting-item label {
+    font-size: 0.95rem;
+  }
+
+  .setting-description {
+    font-size: 0.85rem;
+  }
+
+  .notification-item {
+    gap: 0.5rem;
+  }
+
+  .notification-item label {
+    font-size: 0.9rem;
+  }
+}
