@@ -1,9 +1,4 @@
-Below is a very detailed, production-quality README.md you can use directly for the TaskMate project. It is written to suit GitHub best practices, portfolio presentation, and onboarding new contributors.
 
-You can copy and paste this as-is into README.md.
-
-
----
 
 🗂️ TaskMate
 
@@ -241,4 +236,5 @@ Please ensure your code follows clean React practices and is well documented.
 
 This project is licensed under the MIT License.
 You are free to use, modify, and distribute it.
+
 
