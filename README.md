@@ -79,20 +79,22 @@ LocalStorage API	Client-side data persistence
 📂 Project Structure
 
 taskmate/
+├── public/                     # Static assets
+│
 ├── src/
-│   ├── components/        # Reusable UI components
-│   ├── pages/             # Page-level components
-│   ├── routes/            # Application routing
-│   ├── hooks/             # Custom React hooks
-│   ├── utils/             # Helper functions (localStorage, etc.)
-│   ├── App.jsx            # Root component
-│   ├── main.jsx           # Application entry point
-│   └── index.css          # Global styles
-├── public/                # Static assets
-├── package.json           # Project dependencies & scripts
-├── vite.config.js         # Vite configuration
-└── README.md              # Project documentation
-
+│   ├── components/             # Reusable UI components
+│   ├── pages/                  # Page-level components
+│   ├── routes/                 # Application routing
+│   ├── hooks/                  # Custom React hooks
+│   ├── utils/                  # Helper functions (localStorage, etc.)
+│   │
+│   ├── App.jsx                 # Root application component
+│   ├── main.jsx                # Application entry point
+│   └── index.css               # Global styles
+│
+├── package.json                # Project dependencies & scripts
+├── vite.config.js              # Vite configuration
+└── README.md                   # Project documentation
 
 ---
 
@@ -239,3 +241,4 @@ Please ensure your code follows clean React practices and is well documented.
 
 This project is licensed under the MIT License.
 You are free to use, modify, and distribute it.
+
